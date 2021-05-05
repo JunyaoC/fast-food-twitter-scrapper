@@ -24,7 +24,7 @@ def get_data(tweet):
 
 if __name__ == '__main__':
     
-    profile = tw.get_profile(name="anwmalaysia")
+    profile = tw.get_profile(name="McDonalds")
 
     print(profile.__dict__['following'])
     print(profile.__dict__['follower'])
@@ -37,4 +37,4 @@ if __name__ == '__main__':
     tList = p_map(get_data,tweets.contents)
 
     tDF = pd.DataFrame(tList)
-    tDF.to_csv('anw.csv')
+    tDF.to_csv('mcd.csv')
