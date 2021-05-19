@@ -19,20 +19,19 @@ def get_data(tweet):
         'urls': tweet['urls']
     }
 
-    # tList.append()
     return tData
 
 if __name__ == '__main__':
     
     profile = tw.get_profile(name="McDonalds")
 
-    print(profile.__dict__['following'])
-    print(profile.__dict__['follower'])
+    print('Following: {}'.format(profile.__dict__['following']))
+    print('Follower: {}'.format(profile.__dict__['follower']))
 
 
     twitterID = profile.__dict__['id']
 
-    tweets = tw.get_tweets(twitterID, count=10000)
+    tweets = tw.get_tweets(twitterID, count=50)
     
     tList = p_map(get_data,tweets.contents)
 
