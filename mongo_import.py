@@ -3,7 +3,7 @@ from pprint import pprint
 import pandas as pd
 from tqdm import tqdm
 
-client = MongoClient("127.0.0.1:27017")
+client = MongoClient("mongodb+srv://admin:admin@cluster0.wzrjo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 
 db = client['fastfooddb']
 
